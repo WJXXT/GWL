@@ -13,7 +13,7 @@
 		B956910A1BA9A0D200015D04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95691081BA9A0D200015D04 /* LaunchScreen.xib */; };
 		B95691161BA9A0D200015D04 /* GWLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B95691151BA9A0D200015D04 /* GWLTests.m */; };
 		B95691211BA9A0E000015D04 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95691201BA9A0E000015D04 /* RootViewController.m */; };
-		B95691251BA9A1ED00015D04 /* XXMeunView.m in Sources */ = {isa = PBXBuildFile; fileRef = B95691241BA9A1ED00015D04 /* XXMeunView.m */; };
+		B9EB8AD11BAAB18300C5CBEB /* TbCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EB8AD01BAAB18300C5CBEB /* TbCustomButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,8 @@
 		B95691151BA9A0D200015D04 /* GWLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWLTests.m; sourceTree = "<group>"; };
 		B956911F1BA9A0E000015D04 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		B95691201BA9A0E000015D04 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		B95691231BA9A1ED00015D04 /* XXMeunView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXMeunView.h; sourceTree = "<group>"; };
-		B95691241BA9A1ED00015D04 /* XXMeunView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXMeunView.m; sourceTree = "<group>"; };
+		B9EB8ACF1BAAB18300C5CBEB /* TbCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TbCustomButton.h; path = GWL/TbCustomButton.h; sourceTree = SOURCE_ROOT; };
+		B9EB8AD01BAAB18300C5CBEB /* TbCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TbCustomButton.m; path = GWL/TbCustomButton.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +123,8 @@
 		B95691221BA9A14300015D04 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B95691231BA9A1ED00015D04 /* XXMeunView.h */,
-				B95691241BA9A1ED00015D04 /* XXMeunView.m */,
+				B9EB8ACF1BAAB18300C5CBEB /* TbCustomButton.h */,
+				B9EB8AD01BAAB18300C5CBEB /* TbCustomButton.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -229,9 +229,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B95691051BA9A0D200015D04 /* AppDelegate.m in Sources */,
+				B9EB8AD11BAAB18300C5CBEB /* TbCustomButton.m in Sources */,
 				B95691021BA9A0D200015D04 /* main.m in Sources */,
 				B95691211BA9A0E000015D04 /* RootViewController.m in Sources */,
-				B95691251BA9A1ED00015D04 /* XXMeunView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +416,7 @@
 				B956911B1BA9A0D200015D04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B956911C1BA9A0D200015D04 /* Build configuration list for PBXNativeTarget "GWLTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				B956911E1BA9A0D200015D04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,9 +7,9 @@
 //
 
 #import "RootViewController.h"
-
+#import "TbCustomButton.h"
 @interface RootViewController ()
-
+@property(nonatomic,assign)NSInteger tag;
 @end
 
 @implementation RootViewController
@@ -21,45 +21,40 @@
     UIView *tabBarView=[[UIView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height - 44, self.view.bounds.size.width, 44)];
     tabBarView.backgroundColor =[UIColor whiteColor];
     [self.view addSubview:tabBarView];
-    UIButton *findButton =[UIButton buttonWithType:UIButtonTypeCustom];
-    findButton.tag =101;
-    findButton.frame =CGRectMake(0, 0, 100, 44);
-    findButton.backgroundColor =[UIColor redColor];
-    [tabBarView addSubview:findButton];
+    
+    TbCustomButton *findButton =[[TbCustomButton alloc] initWithcreateImageNormal:@"camera_overturn" ImageSelect:@"camera_overturn_highlighted" name:@"hehe" index:0];
     [findButton addTarget:self action:@selector(btAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIButton *buyButton =[UIButton buttonWithType:UIButtonTypeCustom];
-    buyButton.tag =102;
-    buyButton.frame =CGRectMake(100, 0, 100, 44);
-    buyButton.backgroundColor =[UIColor grayColor];
+    [tabBarView addSubview:findButton];
+    
+    TbCustomButton *buyButton =[[TbCustomButton alloc] initWithcreateImageNormal:@"camera_overturn" ImageSelect:@"camera_overturn_highlighted" name:@"hehe" index:1];
     [tabBarView addSubview:buyButton];
+    NSLog(@"%ld",buyButton.tag);
     [buyButton addTarget:self action:@selector(btAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIButton *activityButton =[UIButton buttonWithType:UIButtonTypeCustom];
-    activityButton.tag =103;
-    activityButton.frame =CGRectMake(150, 0, 100, 44);
-    activityButton.backgroundColor =[UIColor greenColor];
+    TbCustomButton *activityButton =[[TbCustomButton alloc] initWithcreateImageNormal:@"camera_overturn" ImageSelect:@"camera_overturn_highlighted" name:@"hehe" index:2];
     [tabBarView addSubview:activityButton];
     [activityButton addTarget:self action:@selector(btAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIButton *movieButton =[UIButton buttonWithType:UIButtonTypeCustom];
-    movieButton.tag = 104;
-    movieButton.frame =CGRectMake(200, 0, 100, 44);
-    movieButton.backgroundColor =[UIColor yellowColor];
+    TbCustomButton *movieButton =[[TbCustomButton alloc] initWithcreateImageNormal:@"camera_overturn" ImageSelect:@"camera_overturn_highlighted" name:@"hehe" index:3];
     [tabBarView addSubview:movieButton];
     [movieButton addTarget:self action:@selector(btAction:) forControlEvents:UIControlEventTouchUpInside];
+
+    TbCustomButton *whiteButton =[[TbCustomButton alloc] initWithcreateImageNormal:@" " ImageSelect:@" " name:@"" index:4];
+    [tabBarView addSubview:whiteButton];
     UIButton *userButton =[UIButton buttonWithType:UIButtonTypeCustom];
     userButton.tag =106;
     userButton.frame =CGRectMake(325, 0, 50, 44);
-    userButton.backgroundColor =[UIColor blueColor];
+    [userButton setImage:[UIImage imageNamed:@"camera_overturn"] forState:UIControlStateNormal];
+    [userButton setImage:[UIImage imageNamed:@"camera_overturn_highlighted"] forState:UIControlStateSelected];
     [tabBarView addSubview:userButton];
-        [userButton addTarget:self action:@selector(btAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIView *dang =[[UIView alloc]initWithFrame:CGRectMake(250, 0, 50, 44)];
-    dang.tag = 105;
-    dang.backgroundColor =[UIColor whiteColor];
-    [tabBarView addSubview:dang];
-    
+    [userButton addTarget:self action:@selector(btAction:) forControlEvents:UIControlEventTouchUpInside];
 }
 -(void)btAction:(UIButton *)button{
+    if (_tag) {
+        ((UIButton *)[self.view viewWithTag:_tag]).selected =NO;
+    }
+    _tag =button.tag;
     NSInteger tag =button.tag;
-    
+
+    ((UIButton *)[self.view viewWithTag:tag]).selected =YES;
     if (tag ==106) {
         tag--;
         [UIView animateWithDuration:0.5 animations:^{
