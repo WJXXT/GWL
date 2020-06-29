@@ -76,18 +76,13 @@
 
         function changeName() {
             var person=prompt("请输入你的名字","输入");
-            if (person!=null && person!="")
-            {
                 $(".Qrcode-name").html('姓名:' + person);
-            }
         };
 
         function changeID() {
-            var person=prompt("请输入你的学号","输入");
-            if (person!=null && person!="")
-            {
-                $(".Qrcode-id").html('学号:' + person);
-            }
+            var person1=prompt("请输入你的学号","输入");
+                $(".Qrcode-id").html('学号:' + person1);
+            
         };
 
         setInterval(datetime, 1000);
